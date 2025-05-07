@@ -1,0 +1,17 @@
+{
+  "name": "flights-and-search",
+  "version": "1.0.0",
+  "description": "Microservices for handling Flights",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
