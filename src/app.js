@@ -3,7 +3,7 @@ const app = express()
 
 
 app.use(express.urlencoded({
-    extended:true,limit:"100kb"
+    extended:true
 }))
 app.use(express.json())
 
