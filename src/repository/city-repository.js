@@ -1,14 +1,34 @@
-const City = require('../models/city.js')
-const db = require("../models/index.js")
-async function  connect(){
- await db.create({
-    name:"New Delhi"
+const { where } = require("sequelize");
+const {City} = require("../models/index.js")
 
-})
-}
+class CityRepository{
 
+    async createCity({name}){
 
-module.exports = connect;
+        try{
+            const city = await City.create({name})
+            return city;
+        }
+        catch(error){
+            throw error;
+        }
+    }
+        async deleteCity({name}){
 
+            try{
+                await City.destroy(
+                    {
+                        where:{
+                            id:cityId
+                        }
+                    }
+                );
+            }
+            catch(error){
+                throw {error};
+        }
 
+        }
+    }
 
+    module.exports = CityRepository;
