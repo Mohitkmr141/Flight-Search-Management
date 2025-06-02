@@ -148,3 +148,5 @@ dist
 # Database Secret Details
 
 src/config/config.json
+
+example.js
