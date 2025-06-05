@@ -1,6 +1,5 @@
-
+const CityRepository = require("./city-repository.js");
 
 module.exports = {
-    CityRepository:require("./city-repository.js")
-
+    CityRepository
 }

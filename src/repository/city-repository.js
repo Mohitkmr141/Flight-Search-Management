@@ -2,19 +2,19 @@ const { where } = require("sequelize");
 const { City } = require("../models/index.js");
 
 class CityRepository {
-  async createCity({ name }) {
-    //
-
+  async createCity({ name}) {
     try {
       const city = await City.create({
         name,
       });
+
       return city;
     } catch (error) {
-      console.log(`something went wrong in the repository layer`);
+      console.log(`Something went wrong in the repository layer`);
       throw { error };
     }
   }
+
   async deleteCity(cityId) {
     try {
       await City.destroy({
@@ -24,7 +24,7 @@ class CityRepository {
       });
       return true;
     } catch (error) {
-      console.log(`something went wrong in the repository level`);
+      console.log(`Something went wrong in the repository layer`);
       throw { error };
     }
   }
@@ -38,7 +38,7 @@ class CityRepository {
       });
       return city;
     } catch (error) {
-      console.log(`something went wrong in the repository level`);
+      console.log(`Something went wrong in the repository layer`);
       throw { error };
     }
   }
@@ -46,10 +46,8 @@ class CityRepository {
   async getCity(cityId) {
     try {
       const city = await City.findByPk(cityId);
-    } catch (error) {
-      console.log(`something went wrong in the repository level`);
-      throw { error };
-    }
+      return city;
+    } catch (error) {}
   }
 }
 module.exports = CityRepository;
